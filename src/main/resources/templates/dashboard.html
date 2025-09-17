@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - SmartBallot</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h2 th:text="'Welcome, ' + ${user.name} + '!'"></h2>
+<nav>
+    <a href="/vote">Vote Now</a> |
+    <a href="/results">Results</a> |
+    <a href="/logout">Logout</a>
+</nav>
+<p th:if="${message}" th:text="${message}"></p>
+</body>
+</html>

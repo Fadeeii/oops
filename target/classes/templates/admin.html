@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - SmartBallot</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h2>Admin Panel</h2>
+<form method="post" action="/admin/addCandidate">
+    <input type="text" name="name" placeholder="Candidate Name" required>
+    <input type="text" name="party" placeholder="Party" required>
+    <button type="submit">Add Candidate</button>
+</form>
+
+<h3>All Candidates</h3>
+<ul>
+    <li th:each="c : ${candidates}" th:text="${c.name} + ' (' + ${c.party} + ')'"></li>
+</ul>
+
+<a href="/admin/results">View Results</a>
+</body>
+</html>

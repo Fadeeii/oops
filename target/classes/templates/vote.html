@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote - SmartBallot</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h2>Cast Your Vote</h2>
+<form method="post" action="/vote">
+    <ul>
+        <th:block th:each="c : ${candidates}">
+            <li>
+                <input type="radio" name="candidateId" th:value="${c.id}" required>
+                <span th:text="${c.name} + ' (' + ${c.party} + ')'"></span>
+            </li>
+        </th:block>
+    </ul>
+    <button type="submit">Submit Vote</button>
+</form>
+</body>
+</html>

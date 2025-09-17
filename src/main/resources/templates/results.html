@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results - SmartBallot</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h2>Election Results</h2>
+<table border="1">
+    <tr>
+        <th>Candidate</th>
+        <th>Party</th>
+        <th>Votes</th>
+    </tr>
+    <tr th:each="c : ${candidates}">
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.party}"></td>
+        <td th:text="${voteRepo.countByCandidate(c)}"></td>
+    </tr>
+</table>
+<a href="/dashboard">Back</a>
+</body>
+</html>

@@ -1,0 +1,10 @@
+com\smartballot\repo\VoteRepository.class
+com\smartballot\controller\VotingController.class
+com\smartballot\repo\UserRepository.class
+com\smartballot\model\Candidate.class
+com\smartballot\model\VoteRecord.class
+com\smartballot\controller\AdminController.class
+com\smartballot\model\User.class
+com\smartballot\controller\AuthController.class
+com\smartballot\SmartBallotApplication.class
+com\smartballot\repo\CandidateRepository.class

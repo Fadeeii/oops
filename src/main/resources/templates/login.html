@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - SmartBallot</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h2>SmartBallot Login</h2>
+<form method="post" action="/login">
+    <label>Student ID:</label>
+    <input type="text" name="studentId" required>
+    <button type="submit">Login</button>
+</form>
+<p th:if="${error}" style="color:red;" th:text="${error}"></p>
+</body>
+</html>
