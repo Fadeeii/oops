@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -12,21 +13,17 @@ public class User {
     @Column(unique = true, nullable = false)
     private String studentId;
 
-    private String name;
-    private boolean hasVoted = false;
+    @Column(nullable = false)
+    private String password;
 
-    public User() {}
-    public User(String studentId, String name) {
-        this.studentId = studentId;
-        this.name = name;
-    }
+    private boolean hasVoted;
 
-    // getters and setters
+    // Getters and Setters
     public Long getId() { return id; }
     public String getStudentId() { return studentId; }
     public void setStudentId(String studentId) { this.studentId = studentId; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
     public boolean isHasVoted() { return hasVoted; }
     public void setHasVoted(boolean hasVoted) { this.hasVoted = hasVoted; }
 }

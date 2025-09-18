@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Dashboard - SmartBallot</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
-<h2 th:text="'Welcome, ' + ${user.name} + '!'"></h2>
-<nav>
-    <a href="/vote">Vote Now</a> |
-    <a href="/results">Results</a> |
-    <a href="/logout">Logout</a>
-</nav>
-<p th:if="${message}" th:text="${message}"></p>
+    <div class="container">
+        <h2 th:text="'Welcome, ' + ${user.studentId} + '!'"></h2>
+        
+        <nav>
+            <a href="/vote">Vote Now</a> |
+            <a href="/results">Results</a> |
+            <a href="/logout">Logout</a>
+        </nav>
+
+        <p th:if="${message}" th:text="${message}"></p>
+    </div>
 </body>
 </html>
