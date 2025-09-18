@@ -2,15 +2,19 @@
 <html>
 <head>
     <title>Login - SmartBallot</title>
-    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
-<h2>SmartBallot Login</h2>
-<form method="post" action="/login">
-    <label>Student ID:</label>
-    <input type="text" name="studentId" required>
-    <button type="submit">Login</button>
-</form>
-<p th:if="${error}" style="color:red;" th:text="${error}"></p>
+
+<div class="container">
+    <h2>Welcome to SmartBallot</h2>
+    <form method="post" action="/login">
+        <input type="text" name="studentId" placeholder="Enter Student ID" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p th:if="${error}" th:text="${error}" class="error"></p>
+</div>
+
 </body>
 </html>
